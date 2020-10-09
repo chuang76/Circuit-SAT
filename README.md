@@ -9,7 +9,7 @@ There are 32 input ports, each can value "1" or "0", so the program will conside
 
 
 
-<img src="https://cs.calvin.edu/courses/cs/374/exercises/01/project/32-Bit-Circuit.png" style="zoom: 50%;" />
+<img src="https://cs.calvin.edu/courses/cs/374/exercises/01/project/32-Bit-Circuit.png" width="500" height="290" />
 
 ## Usage
 
@@ -35,3 +35,7 @@ There are 32 input ports, each can value "1" or "0", so the program will conside
 
 ## Results
 
+- Solution: 1,179,567 combinations
+- Performance
+
+<img src="https://github.com/chuang76/Circuit-SAT/blob/main/result.png?raw=true" width="400" height="320" />
