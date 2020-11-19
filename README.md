@@ -11,24 +11,27 @@ There are 32 input ports, each can value "1" or "0", so the program will conside
 
 <img src="https://cs.calvin.edu/courses/cs/374/exercises/01/project/32-Bit-Circuit.png" width="500" height="290" />
 
+## Policy 
+
+For the master (root, process 0), distribute the data which should be calculated to the salves. The slaves (process 1 - N) calculate the local result via `checkCircuit`() function first, then use `MPI_Send()` to send the local result to the master. The master use `MPI_Recv()` to collect all the local results and do the summation. 
+
+- Other algorithms: tree structure, butterfly structure 
+
+
+
 ## Usage
 
-- Compile
+- Compile and execute 
 
   ```
-  $ mpiicc circuit_sat.c -o circuit_sat
-  ```
-
-- Execute
-
-  ```
-  $ mpiexec -n [number of processes] circuit_sat
+  mpiicc circuit_sat.c -o circuit_sat
+  mpiexec -n [number of processes] circuit_sat
   ```
 
 - Plot
 
   ```
-  $ python plot.py
+  python plot.py
   ```
 
   
