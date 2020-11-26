@@ -13,7 +13,7 @@ There are 32 input ports, each can value "1" or "0", so the program will conside
 
 ## Policy 
 
-For the master (root, process 0), distribute the data which should be calculated to the salves. The slaves (process 1 - N) calculate the local result via `checkCircuit`() function first, then use `MPI_Send()` to send the local result to the master. The master uses `MPI_Recv()` to collect all the local results and does the summation. 
+For the master (root, process 0), distribute the data which should be calculated to the salves. The slaves (process 1 - N) calculate the local result via `checkCircuit()` function first, then use `MPI_Send()` to send the local result to the master. The master uses `MPI_Recv()` to collect all the local results and does the summation. 
 
 - Other algorithms: tree structure, butterfly structure 
 
